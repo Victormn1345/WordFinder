@@ -1,0 +1,37 @@
+{% from "macros.html" import nav_link with context %}
+
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Word Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script type=text/javascript src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left">
+            <ul class="nav navbar-nav">
+                    {{ nav_link('home', 'Home') }}
+                    {{ nav_link('application', 'Application') }}
+                <div class="center">
+                    <p>
+                        Word Finder (Created by Victor Nguyen)
+                    </p>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+</body>
+
+{%block content%}
+{%endblock%}
+
+<div class="footer">
+    <a href="https://github.umn.edu/nguy2875/CSCI4131_Word_List" id="repo">Github Repo Link</a>
+</div>
+</html>

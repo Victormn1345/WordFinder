@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{%block content%}
+    <br>
+    <br>
+    <div id="content">
+        <form>
+            <select name="WordLength" id="wordLength">
+                <option value="-1">--Please choose an option--</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <br>
+            Pattern: <input type="text" id="pattern" pattern="[A-Za-z\.]{,10}" title="patternInput">
+            <br>
+            <br>
+            <button type="button" onclick="getWords()">Results</button>
+        </form>
+
+        <table id="PossibleWords" width="100%"> 
+                <caption>Possible Words!</caption>
+        </table>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="def"></p>
+        </div>
+       
+      </div>
+    </div>
+{%endblock%}
+
+</body>
+
+</html>

@@ -1,1 +1,1 @@
-# WordFinder
+# CSCI4131_Word_List

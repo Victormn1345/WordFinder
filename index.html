@@ -1,0 +1,37 @@
+<!doctype html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Word Finder</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+</head>
+
+<body>
+{%block nav%}
+    <br>
+    <br>
+    <div class="content">
+        <select name="WordLength">
+            <option value="">--Please choose an option--</option>
+            <option value="three">3</option>
+            <option value="four">4</option>
+            <option value="five">5</option>
+            <option value="six">6</option>
+            <option value="seven">7</option>
+            <option value="eight">8</option>
+            <option value="nine">9</option>
+            <option value="ten">10</option>
+        </select>
+        <br>
+        <br>
+        Pattern: <input type="text" name="pattern" pattern="(([A-Za-z.]).{,10}" title="patternInput">
+    </div>
+{%endblock%}
+
+{%block footer%}
+{%endblock%}
+</body>
+
+</html>
