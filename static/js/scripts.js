@@ -267780,6 +267780,8 @@ function getWords() {
     var wordLength = document.getElementById("wordLength").value;
     console.log(wordLength);
     var pattern = document.getElementById("pattern").value;
+    var letters = document.getElementById("letters").value;
+    console.log("HELLO?");
     console.log(pattern);
     var valid = validPattern(pattern, wordLength);
     
@@ -267797,18 +267799,29 @@ function getWords() {
             word = sowpods[i];
             word = word.toLowerCase();
             pattern = pattern.toLowerCase();
+            letters = letters.toLowerCase();
             var wordWorks = true;
             if (word.length == wordLength) {
-                console.log(word);
-                console.log(pattern);
+               // console.log(word);
+                //console.log(pattern);
                 for(var j = 0; j < wordLength; j++){
                     if(word.charAt(j) != pattern.charAt(j) && pattern.charAt(j) != "."){
                         wordWorks = false;
+                        break;
+                    }
+                    var inLetterParam = false;
+                    for(var k = 0; k < letters.length; k++) {
+                        if(letters.charAt() == word.charAt(j)){
+                            inLetterParam = true;
+                        }
                     }
                 }
-                if(wordWorks == true){
-                    console.log(word);
-                    var h = 'javascript:getDef(' + word.toLowerCase() + ');';
+                //console.log("JESUS");
+                if(wordWorks == true && inLetterParam == true){
+                    //console.log(word);
+                    //console.log("FUCKKKK")
+                    //console.log(typeof word);
+                    var h = 'javascript:getDef(' + word + ');';
                     a.href = h; 
                     //var h = "getDef(" + word.toLowerCase() + ");"; 
                     //console.log(h);
